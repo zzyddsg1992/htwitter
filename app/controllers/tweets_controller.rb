@@ -8,7 +8,10 @@ class TweetsController < ApplicationController
 			flash[:success] = "you have created a tweet"
 			redirect_to new_tweet_path
 		end
-
+	
+	end
+	def index
+		@tweets = Tweet.all
 	end
 
 	def tweet_params
