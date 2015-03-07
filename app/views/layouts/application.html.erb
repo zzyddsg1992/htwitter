@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Htwitter</title>
+  <title>Ilab twitter</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -17,7 +17,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "Htwitterß", root_path, class: 'navbar-brand'	%>
+      <%= link_to "ilab twitter", root_path, class: 'navbar-brand'	%>
     
     </div>
 
@@ -26,7 +26,7 @@
       <ul class="nav navbar-nav">
         <li class="active">
         	<%= link_to "New Tweet", new_tweet_path %>
-        	<a href="#">Link <span class="sr-only">(current)</span></a></li>
+        </li>
         <li><a href="#">Link</a></li>
        
       </ul>
@@ -53,6 +53,11 @@
   </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
+	<% flash.each do |key,value| %>
+	<div class="alert alert-<%=key%>">
+	<%= value %>
+	</div>
+	<% end %>
 <%= yield %>
 </div>
 </body>
