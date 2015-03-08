@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :tweets
   
+  resources :profiles
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
